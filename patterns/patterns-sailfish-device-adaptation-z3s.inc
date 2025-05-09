@@ -78,6 +78,9 @@ Requires: geoclue-provider-hybris
 #Requires: nfcd-binder-plugin
 #Requires: nfcd-pn54x-plugin
 
+# For mount partitions
+Requires: parse-android-dynparts
+
 %description -n patterns-sailfish-device-adaptation-z3s
 Pattern with packages for z3s HW Adaptation
 

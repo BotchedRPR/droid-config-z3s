@@ -1,6 +1,8 @@
 # These and other macros are documented in ../droid-configs-device/droid-configs.inc
 # Feel free to cleanup this file by removing comments, once you have memorised them ;)
 
+%define android_version_major 13
+
 %define device z3s
 %define vendor samsung
 
