@@ -1,0 +1,16 @@
+[Unit]
+Description=Droid mount for /odm/etc
+Before=local-fs.target systemd-modules-load.service
+
+[Mount]
+What=/odm_root/etc
+Where=/odm/etc
+Type=none
+Options=bind
+
+# Default is 90 which makes mount period too long in case of
+# errors so drop it down a notch.
+TimeoutSec=10
+
+[Install]
+WantedBy=local-fs.target

@@ -1,0 +1,12 @@
+[Unit]
+Description=Setup dynamic partitions
+Before=system.mount system_ext.mount vendor.mount product.mount local-fs.target systemd-modules-load.service droid-hal-init.service
+DefaultDependencies=no
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/bash /usr/bin/droid/dmsetup.sh
+
+[Install]
+WantedBy=droid-hal-init.service
